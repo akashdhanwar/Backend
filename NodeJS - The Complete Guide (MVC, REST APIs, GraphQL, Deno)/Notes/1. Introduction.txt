@@ -1,0 +1,6 @@
+Node.js is a JavaScript runtime.
+It is JavaScript on the Server.
+We can use Node.js to run JavaScript outside of the browser.
+Node.js uses Google's V8 Engine(Compiles JS to Machine Code)
+
+Installation    -   https://nodejs.org
