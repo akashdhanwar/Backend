@@ -5,4 +5,14 @@ Node.js uses Google's V8 Engine(Compiles JS to Machine Code)
 
 Installation    -   https://nodejs.org
 
-Lec-5
+We can use Nodejs for more than just Server-Side code like Utility Scripts, Build Tools, etc
+Run Server      -   We can Create Server & Listen to Incoming Requests
+Business Logic  -   Handle Requests, Validate Input, Connect to Database
+Responses       -   Return Responses(Rendered HTML, JSON, etc)
+
+Executing Node Code
+REPL            -   Read User Input 
+                    Eval User Input
+                    Print Output(Result) 
+                    Loop(Wait for new input)
+Executing Files
