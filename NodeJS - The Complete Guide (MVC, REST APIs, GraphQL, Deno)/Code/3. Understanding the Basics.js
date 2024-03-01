@@ -20,7 +20,7 @@ const server = http.createServer((req,res)=>{
 // res.setHeader('Content-Type','text/html');
   res.write('<html>')
   res.write('<head><title>My First Page</title></heady>');
-  res.write('<body><h1>Hello from my Node.js Server</h1></body>);
+  res.write('<body><h1>Hello from my Node.js Server</h1></body>');
   res.write('</html>');
   res.end();
   // res.write() now will not throw error here but we should not write like this 
