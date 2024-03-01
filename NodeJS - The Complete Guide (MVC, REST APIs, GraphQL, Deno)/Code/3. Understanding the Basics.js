@@ -1,2 +1,9 @@
 // Creating a Node.js Server
-require('fs');
+const http = require('http');
+const PORT_NUMBER = 3000;
+// function rqListener(req, res) {
+// }
+const server = http.createServer((req,res)=>{
+  console.log(req);
+});
+server.listen(PORT_NUMBER);
