@@ -1,7 +1,7 @@
 - How the web works
 - Create a Node.js Server
 - Using Node Core Modules
-- Working with requests and responses(Baaics)
+- Working with requests and responses(Basics)
 - Asynchronous Code & The Event Loop
 
 - How the web works 
@@ -20,5 +20,14 @@ fs -
 path
 os
 
+- Working with Requests & Response
 
-LEC-27
+
+- Asynchronous Call & The Event Loop
+Node.js Program Lifecycle -
+Execute node app.js > Start Script > Parse code, Register variables & Functions > Event Loop(Keeps on running as long as there are event listeners registered) > process.exit()
+
+
+
+
+LEC-29
