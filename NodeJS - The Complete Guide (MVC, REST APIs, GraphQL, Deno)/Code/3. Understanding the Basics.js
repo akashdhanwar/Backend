@@ -1,9 +1,19 @@
-// Creating a Node.js Server
+// # 1. Creating a Node.js Server
 const http = require('http');
 const PORT_NUMBER = 3000;
 // function rqListener(req, res) {
 // }
 const server = http.createServer((req,res)=>{
-  console.log(req);
+// console.log(req);
+// # 2. Reading request
+  console.log(req.url, req.method, req.headers);
+// # 3. Sending back response 
+  res.setHeader('Content-Type','text/html');
+  res.write('<html>')
+  res.write('<head><title>My First Page</title></head>');
+  res.write('<body><h1>Hello from my Node.js Server</h1></body>);
+  res.write('</html>);
+  res.end();
+  // res.write() now will not throw error here but we should not write like this 
 });
 server.listen(PORT_NUMBER);
