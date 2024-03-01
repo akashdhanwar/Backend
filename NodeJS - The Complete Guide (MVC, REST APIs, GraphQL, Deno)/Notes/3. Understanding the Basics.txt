@@ -1,0 +1,18 @@
+- How the web works
+- Create a Node.js Server
+- Using Node Core Modules
+- Working with requests and responses(Baaics)
+- Asynchronous Code & The Event Loop
+
+- How the web works 
+User opens browser, Hits a Url and Browser sends request to server of that IP
+We write code on that IP address server and send back the response
+Request Response transmission is done through HTTP/HTTPS Protocol
+HTTP - A Protocol for transferring data which is understood by Browser and Server
+HTTPS - HTTP + Data Encryptio (during Transmission)
+
+- Creating a Node.js Server
+
+
+
+LEC-26
