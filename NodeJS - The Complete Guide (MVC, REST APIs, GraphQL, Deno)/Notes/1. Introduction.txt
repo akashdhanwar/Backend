@@ -21,9 +21,15 @@
     Business Logic  -   Handle Requests, Validate Input, Connect to Database
     Responses       -   Return Responses(Rendered HTML, JSON, etc)
 
+(Lec-6) - Course Outline
+(Lec-7) - How to get the most out of the course
+(Lec-8) - Course Setup
+(Lec-9) - Working with REPL vs Using Files
     Executing Node Code
     REPL            -   Read User Input 
                     Eval User Input
                     Print Output(Result) 
                     Loop(Wait for new input)
     Executing Files
+
+(Lec-10) - Using the Attached Source Code
