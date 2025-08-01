@@ -17,7 +17,7 @@
     app.js
     const http = require('http');
     const server = http.createServer((req, res){ // Request listener function, returns server
-        
+        console.log(req);
     });
     server.listen(3000); // Port
 
@@ -29,7 +29,13 @@
 (Lec-29) - Controlling the Nodejs Process
     ctrl + C to quit the server
 (Lec-30) - Understanding Requests
-    
+    We have headers and other things in req
+
+    console.log(req.url, req.method, req.headers);
+    url - Everything after host
+
+(Lec-31) - Sending Responses
+
 
 
 
