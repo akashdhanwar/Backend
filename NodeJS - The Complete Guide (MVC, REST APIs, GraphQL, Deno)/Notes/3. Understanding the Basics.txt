@@ -18,6 +18,7 @@
     const http = require('http');
     const server = http.createServer((req, res){ // Request listener function, returns server
         console.log(req);
+        // process.exit();
     });
     server.listen(3000); // Port
 
@@ -35,6 +36,17 @@
     url - Everything after host
 
 (Lec-31) - Sending Responses
+    res.setHeader('Content-Type', 'text/html');
+    res.write('<html>'); // Write some data to response in chunks
+    res.write('<head><title>My First Page</head>');
+    res.write('<body><h1>Hello from my Node.js Server</h1></body>');
+    res.write('</html>');
+res.end();  // send response
+// Error after that if try to write
+
+(Lec-32) - Request & Response Headers
+    https://www.deceloper.mozilla.org/en-US/docs/Web/HTTP/Headers
+(Lec-33) - Routing Requests
 
 
 
