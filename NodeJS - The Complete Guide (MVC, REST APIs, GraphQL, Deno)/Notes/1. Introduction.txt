@@ -1,18 +1,29 @@
-Node.js is a JavaScript runtime.
-It is JavaScript on the Server.
-We can use Node.js to run JavaScript outside of the browser.
-Node.js uses Google's V8 Engine(Compiles JS to Machine Code)
+(Lec-1) - Introduction
+(Lec-2) - What is Node.js
+    Node.js is a JavaScript runtime.
+    It is JavaScript on the Server.
+    We can use Node.js to run JavaScript outside of the browser.
+    Node.js uses Google's V8 Engine(Compiles JS to Machine Code)
 
-Installation    -   https://nodejs.org
+(Lec-3) - Join our Online Learning Community
+(Lec-4) - Installing Node.js, creating first App
+    https://www.nodejs.org
+    Download and Install
+    node -v
+    node 
 
-We can use Nodejs for more than just Server-Side code like Utility Scripts, Build Tools, etc
-Run Server      -   We can Create Server & Listen to Incoming Requests
-Business Logic  -   Handle Requests, Validate Input, Connect to Database
-Responses       -   Return Responses(Rendered HTML, JSON, etc)
+    first-app.js > console.log("Hello");
+    node first-app.js
 
-Executing Node Code
-REPL            -   Read User Input 
+(Lec-5) - Understanding the Role And Usage of Node.js
+    We can use Nodejs for more than just Server-Side code like Utility Scripts, Build Tools, etc
+    Run Server      -   We can Create      Server & Listen to Incoming Requests
+    Business Logic  -   Handle Requests, Validate Input, Connect to Database
+    Responses       -   Return Responses(Rendered HTML, JSON, etc)
+
+    Executing Node Code
+    REPL            -   Read User Input 
                     Eval User Input
                     Print Output(Result) 
                     Loop(Wait for new input)
-Executing Files
+    Executing Files
