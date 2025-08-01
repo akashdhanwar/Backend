@@ -45,7 +45,8 @@
     // Error after that if try to write
 
 (Lec-32) - Request & Response Headers
-    https://www.deceloper.mozilla.org/en-US/docs/Web/HTTP/Headers
+    https://www.developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+
 (Lec-33) - Routing Requests
 
 
