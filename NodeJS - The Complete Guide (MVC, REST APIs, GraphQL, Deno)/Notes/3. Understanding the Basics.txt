@@ -14,6 +14,15 @@
     path - Construct path to file or file system
     os - Operating System related information
 
+    app.js
+    const http = require('http');
+    const server = http.createServer((req, res){ // Request listener function, returns server
+        
+    });
+    server.listen(3000); // Port
+
+(Lec-28) - The Node Lifecycle & Event Loop
+
 - Working with Requests & Response
 
 
