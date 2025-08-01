@@ -22,13 +22,16 @@
     server.listen(3000); // Port
 
 (Lec-28) - The Node Lifecycle & Event Loop
+    We execute by node app.js
+    Execute node app.js > Start Script > Parse code, Register variables & Functions > Event Loop(Keeps on running as long as there are event listeners registered) > process.exit()
+    Our nodejs is managed by this Event Loop
+    
+(Lec-29) - Controlling the Nodejs Process
+    ctrl + C to quit the server
+(Lec-30) - Understanding Requests
+    
 
-- Working with Requests & Response
 
-
-- Asynchronous Call & The Event Loop
-Node.js Program Lifecycle -
-Execute node app.js > Start Script > Parse code, Register variables & Functions > Event Loop(Keeps on running as long as there are event listeners registered) > process.exit()
 
 
 
