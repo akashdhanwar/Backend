@@ -4,7 +4,7 @@
     We write code on that IP address server and send back the response
     Request Response transmission is done through HTTP/HTTPS Protocol
     HTTP - A Protocol for transferring data which is understood by Browser and Server
-    HTTPS - HTTP + Data Encryptio (during Transmission)
+    HTTPS - HTTP + Data Encryption (during Transmission)
 
 - Creating a Node.js Server
 
