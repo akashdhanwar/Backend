@@ -1,9 +1,10 @@
-const http = require("http");
-
+const bodyParser = require("body-parser");
 const express = require("express");
 
 const PORT_NUMBER = 3000;
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false })); // Calls next automatically
 
 // Add a Middleware, next is a function
 // app.use((req, res, next) => {
@@ -15,7 +16,14 @@ const app = express();
 app.use("/add-product", (req, res, next) => {
   console.log("In Another Middleware");
   //   We need not to write headers, attached a body of type any
-  res.send("<h1>Add Product page</h1>");
+  res.send(
+    "<html><head><title>Enter Message</title></head><body><form action='/product' method='POST'><input type='text' name='title'><button type='submit'>Add Product</button></form></body></html>"
+  );
+});
+
+app.post("/product", (req, res, next) => {
+  console.log(req.body);
+  res.redirect("/");
 });
 
 app.use("/", (req, res, next) => {

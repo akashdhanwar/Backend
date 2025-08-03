@@ -59,4 +59,18 @@
     Handle request to '/' and '/users' such that each req only has one handler/middleware that does something with it(send dummy response)
 
 (Lec-65) - Parsing Incoming Requests
+    Need to define parser 
+    npm i body-parser --save
+
+    const bodyParser = require("body-parser");
+    app.use(bodyParser.urlencoded({ extended: false })); // Calls next automatically
+    app.use("/product", (req, res, next) => {
+      console.log(req.body);
+      res.redirect("/");
+    });
+
+(Lec-66) - Limiting Middleware Execution to POST Requests
+    app.get()/app.post() instead of app.use()
+
+(Lec-67) - Using Express Router
     
