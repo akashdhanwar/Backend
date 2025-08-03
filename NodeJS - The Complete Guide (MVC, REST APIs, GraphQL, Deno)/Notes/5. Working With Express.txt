@@ -29,8 +29,7 @@
     app.use((req, res, next) => {
       console.log("In Another Middleware");
     });
-    const server = http.createServer(app);
-    server.listen(PORT_NUMBER);
+    app.listen(PORT_NUMBER);
 
 (Lec-62) - How Middleware Works
     // Will not be executed until next() from previous Middleware
@@ -41,4 +40,23 @@
     });
 
 (Lec-63) - Express.js - Looking Behind the Scenes
+    https://github.com/expressjs/express
+
+(Lec-64) - Handling Different Routes
+    Add '/' at last
+
+    app.use("/add-product", (req, res, next) => {
+      res.send("<h1>Add Product Page</h1>");
+    });
+
+    app.use("/", (req, res, next) => {
+      res.send("<h1>Hello from Express!!</h1>");
+    });
+
+#### Assignment 2: Time to Practice - Express.js
+    Create a npm project and install express.js
+    Create express.js app that funnels the request through 2 middleware functions that log something to console and returns one response
+    Handle request to '/' and '/users' such that each req only has one handler/middleware that does something with it(send dummy response)
+
+(Lec-65) - Parsing Incoming Requests
     
