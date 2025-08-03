@@ -20,10 +20,25 @@ const server = http.createServer((req, res) => {
     return res.end(); // We return so that we must not execute further lines
   }
   if (url === "/message" && method === "POST") {
-    fs.writeFileSync("message.txt", "DUMMY");
-    res.statusCode = 302;
-    res.setHeader("Location", "/");
-    return res.end();
+    // #6. Parsing Request Bodies
+    const body = [];
+    req.on("data", (chunk) => {
+      console.log(chunk);
+      body.push(chunk);
+    });
+    // Buffer them
+    return req.on("end", () => {
+      const parsedBody = Buffer.concat(body).toString();
+      console.log(parsedBody);
+      const message = parsedBody.split("=")[1];
+      // fs.writeFileSync("message.txt", message);
+      fs.writeFile("message.txt", message, (err) => {
+        res.statusCode = 302;
+        // # 5. Redirecting Requests
+        res.setHeader("Location", "/");
+        return res.end();
+      });
+    });
   }
   // # 3. Sending back response
   res.setHeader("Content-Type", "text/html");

@@ -66,7 +66,38 @@
     }
 
 (Lec-35) - Parsing Request Bodies
+    Stream      -   Request read in chunks, then fully parsed. We can start before full request is read
+                    Good for parsing files
+    Buffers     -   We use buffer to work on Streams
+                    It is like a Bus Stop for Streams, holds multiple chunks
+    const body = [];
+    req.on("data", (chunk) => {
+      console.log(chunk);
+      body.push(chunk);
+    });
+    return req.on("end", () => {
+      // Buffer them
+      const parsedBody = Buffer.concat(body).toString();
+      console.log(parsedBody);
+      const message = parsedBody.split("=")[1];
+      fs.writeFileSync("message.txt", message);
+      res.statusCode = 302;
+      res.setHeader("Location", "/");
+      return res.end();
+    });     
 
+(Lec-36) - Understanding Event Driven Code Execution\
+    Return if we do not want to execute next lines
+(Lec-37) - Blocking and Non-Blocking Code
+    writeFile vs writeFileSync
+    writeFileSync   -   Is a Synchronous writing of file and blocks code
+    writeFile       -   Do not blocks. Better to use it. 
+                        It consists of a callback function as third argument, which triggers when operation completes
+    fs.writeFile("message.txt", message, (err) => {
+        res.statusCode = 302;
+        // # 5. Redirecting Requests
+        res.setHeader("Location", "/");
+        return res.end();
+    });
 
-
-LEC-33
+(Lec-38) - Node.js - Looking Behind the Scenes
