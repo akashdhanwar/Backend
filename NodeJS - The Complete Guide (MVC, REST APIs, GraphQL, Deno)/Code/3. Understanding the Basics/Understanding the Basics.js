@@ -1,6 +1,6 @@
 // # 1. Creating a Node.js Server
 const http = require("http");
-const routes = require("./3. routes");
+const routes = require("./routes");
 const PORT_NUMBER = 3000;
 
 const server = http.createServer(routes);
