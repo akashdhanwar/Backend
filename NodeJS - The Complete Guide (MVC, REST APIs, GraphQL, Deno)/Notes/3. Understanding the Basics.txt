@@ -26,6 +26,8 @@
     We execute by node app.js
     Execute node app.js > Start Script > Parse code, Register variables & Functions > Event Loop(Keeps on running as long as there are event listeners registered) > process.exit()
     Our nodejs is managed by this Event Loop
+
+    createServer() event never finishes by default
     
 (Lec-29) - Controlling the Nodejs Process
     ctrl + C to quit the server
@@ -86,9 +88,13 @@
       return res.end();
     });     
 
-(Lec-36) - Understanding Event Driven Code Execution\
+(Lec-36) - Understanding Event Driven Code Execution
     Return if we do not want to execute next lines
+
 (Lec-37) - Blocking and Non-Blocking Code
+    JS code is non Blocking
+    Use callbacks and events => Order changes
+
     writeFile vs writeFileSync
     writeFileSync   -   Is a Synchronous writing of file and blocks code
     writeFile       -   Do not blocks. Better to use it. 
@@ -101,3 +107,43 @@
     });
 
 (Lec-38) - Node.js - Looking Behind the Scenes
+    Single Threaded, Event Loop and Blocking Code
+    Performance     -   File tasks takes long time, sent to Worker Pool(responsible of Heavy Lifting on multi threads)
+                        Worker Pool triggers callback for file operation when completed, that is sent to Event Loop
+                        Event Loop handles Event Callbacks 
+                        Event Loop -
+                            Checks for Timers(Execute setTimeout, setInterval Callbacks)
+                            Other callbacks(Execute IO related callbacks that were deferred)
+                            Polls(Retrieve new IO events, execute their callbacks. Or defer them. Or move to Timers if any)
+                            Check(Execute setImmediate() callbacks)
+                            Close Callbacks(Execute all 'close' event callbacks)
+                            process.exit(), if no remaining Event Handlers left(refs === 0)
+
+(Lec-39) - Using the Node Modules System
+    Created separate route file
+    Exporting   -   module.exports = requestHandler;
+                    const routes = require("./routes");
+        
+                    module.exports = {
+                        handler: requestHandler,
+                        someTest: "Some text"
+                    };
+                    OR
+                    module.exports.handler = requestHandler
+                    module.exports.someTest = "Some Text"
+                    OR
+                    exports.handler = requestHandler
+                    exports.someTest = "Some Text"
+                    
+(Lec-40) - Wrap Up 
+(Lec-41) - Assignment 1: Time to Practice - The Basics
+    Spin up a Node.js server at 3000
+    Use two routes - '/' (Return some greeting text) and '/users' (Return list of users)
+    Add a form with username input at '/' and submit a POST request to '/create-uesr' upon a button click
+    Add '/create-user' route and parse the incoming data like username and log to console
+
+(Lec-42) - Useful Resources & Links
+    Official Node.js Docs: https://nodejs.org/en/docs/guides/
+    Full Node.js Reference (for all core modules): https://nodejs.org/dist/latest/docs/api/
+    More about the Node.js Event Loop: https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/
+    Blocking and Non-Blocking Code: https://nodejs.org/en/docs/guides/dont-block-the-event-loop/
