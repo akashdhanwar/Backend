@@ -1,0 +1,17 @@
+(Lec-43) - Module Introduction
+(Lec-44) - Understanding NPM Scripts
+    npm init
+    add scripts
+    npm start/ npm run start-script
+
+(Lec-45) - Installing 3rd Party Packagess
+    npm i nodemon --save-dev                // Dev Dependency
+    express, body-parser
+
+(Lec-46) - Global Features vs Core Modules vs Third Party
+    Global features: Keywords like const or function but also some global objects like process
+    Core Node.js Modules: Examples would be the file-system module ("fs"), the path module ("path") or the Http module ("http")
+    Third-party Modules: Installed via npm install - you can add any kind of feature to your app via this way
+
+(Lec-47) - Using Nodemon for Autorestarts
+    
