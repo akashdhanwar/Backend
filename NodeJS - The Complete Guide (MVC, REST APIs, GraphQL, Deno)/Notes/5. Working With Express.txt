@@ -20,6 +20,10 @@
     It is all about Middleware
     Request > Middleware(req,res,next)=>{} > next() > Middleware(req,res,next)=>{} > res.send() > Response
 
+    const express = require("express");
+    const PORT_NUMBER = 3000;
+    const app = express();
+
     // Add a Middleware, next is a function
     app.use((req, res, next) => {
       console.log("In Middleware");
@@ -64,6 +68,7 @@
 
     const bodyParser = require("body-parser");
     app.use(bodyParser.urlencoded({ extended: false })); // Calls next automatically
+
     app.use("/product", (req, res, next) => {
       console.log(req.body);
       res.redirect("/");
@@ -73,4 +78,70 @@
     app.get()/app.post() instead of app.use()
 
 (Lec-67) - Using Express Router
+    const adminRoutes = require("./routes/admin");
+    const shopRoutes = require("./routes/shop");
+    app.use(adminRoutes);
+    app.use(shopRoutes);
+
+    const router = express.Router();
+    router.get("/add-product", (req, res, next) => {
+    });
+    module.exports = router;
+
+(Lec-68) - Adding a 404 Error Page
+    After all routes, if nothing found then it executes
+
+    app.use((req, res, next) => {
+      res.status(404).send("<h1>Page not Found</h1>");
+    });
+
+(Lec-69) - Filtering Paths
+    Suppose we have common starting route like '/admin'
+    We can add it in app.js instead of routes 
     
+    const adminRoutes = require("./routes/admin");
+    app.use("/admin", adminRoutes);
+
+(Lec-70) - Creating HTML Pages 
+    views contains HTML files
+
+(Lec-71) - Serving HTML Pages
+    Use path package
+
+    const path = require("path");
+    const router = express.Router();
+
+    router.get("/add-product", (req, res, next) => {
+      res.sendFile(path.join(__dirname, "..", "admin", "add-product.html"));
+    });
+
+(Lec-72) - Returning a 404 Page
+(Lec-73) - A Hint
+    In the next lecture, we'll write this code:
+    module.exports = path.dirname(process.mainModule.filename);
+    (I explain why we write this code in the next lecture when we write it!)
+
+    The important thing is that you might get a deprecation warning for that code - in that case, you can simply switch to this code:
+    module.exports = path.dirname(require.main.filename);
+
+(Lec-74) - Using a Helper Function for Navigation
+    const path = require("path");
+    module.exports = path.dirname(require.main.filename);
+
+    const rootDir = require("../util/path");
+    res.sendFile(path.join(rootDir, "admin", "add-product.html"));
+
+(Lec-75) - Styling our Pages
+(Lec-76) - Serving Files Statically
+    Create a public folder
+    app.use(express.static(path.join(__dirname, 'public')));
+    Also add link rel stylesheet in html
+
+#### Assignment 3: Time to Practice - Navigation
+    Create npm Project and install Express.js
+    Create an express.js app which serves two html files for '/' and '/users'
+    Add some static css file to your peoject that should be required by at least one of the html files 
+
+(Lec-77) - Wrap Up
+(Lec-78) - Useful Resources & Links
+    Express.js Official Docs: https://expressjs.com/en/starter/installing.html

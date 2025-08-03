@@ -1,34 +1,21 @@
-const bodyParser = require("body-parser");
-const express = require("express");
+const path = require("path");
 
-const PORT_NUMBER = 3000;
+const express = require("express");
+const bodyParser = require("body-parser");
+
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false })); // Calls next automatically
+const adminRoutes = require("./routes/admin");
+const shopRoutes = require("./routes/shop");
 
-// Add a Middleware, next is a function
-// app.use((req, res, next) => {
-//   console.log("In Middleware");
-//   next(); //  Allows the request to continue to next Middleware
-// });
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Will not be executed until next() from previous Middleware
-app.use("/add-product", (req, res, next) => {
-  console.log("In Another Middleware");
-  //   We need not to write headers, attached a body of type any
-  res.send(
-    "<html><head><title>Enter Message</title></head><body><form action='/product' method='POST'><input type='text' name='title'><button type='submit'>Add Product</button></form></body></html>"
-  );
+app.use("/admin", adminRoutes);
+app.use(shopRoutes);
+
+app.use((req, res, next) => {
+  res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
 });
 
-app.post("/product", (req, res, next) => {
-  console.log(req.body);
-  res.redirect("/");
-});
-
-app.use("/", (req, res, next) => {
-  console.log("In Another Middleware");
-  res.send("<h1>Hello from Express!!</h1>");
-});
-
-app.listen(PORT_NUMBER);
+app.listen(3000);
