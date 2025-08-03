@@ -1,2 +1,44 @@
 (Lec-58) - Module Introduction
 (Lec-59) - What is Express.js
+    Server Logic is complex
+    We want to focus on business logic, not on nitty-gritty details
+    Use a framework for the Heavy Lifting, which has helper functions, tools and rules that help build the application
+    Alternatives to Express.js  -   Vanilla Node.js, Adonis.js, Koa, Sails.js
+
+(Lec-60) - Installing Express.js
+    npm i express --save
+    Exports a express()
+    
+    const http = require("http");
+    const express = require("express");
+    const PORT_NUMBER = 3000;
+    const app = express();
+    const server = http.createServer(app);
+    server.listen(PORT_NUMBER);
+
+(Lec-61) - Adding Middleware
+    It is all about Middleware
+    Request > Middleware(req,res,next)=>{} > next() > Middleware(req,res,next)=>{} > res.send() > Response
+
+    // Add a Middleware, next is a function
+    app.use((req, res, next) => {
+      console.log("In Middleware");
+      next(); //  Allows the request to continue to next Middleware
+    });
+    // Will not be executed until next() from previous Middleware
+    app.use((req, res, next) => {
+      console.log("In Another Middleware");
+    });
+    const server = http.createServer(app);
+    server.listen(PORT_NUMBER);
+
+(Lec-62) - How Middleware Works
+    // Will not be executed until next() from previous Middleware
+    app.use((req, res, next) => {
+      console.log("In Another Middleware");
+      //   We need not to write headers, attached a body of type any
+      res.send("<h1>Hello from Express!!</h1>");
+    });
+
+(Lec-63) - Express.js - Looking Behind the Scenes
+    

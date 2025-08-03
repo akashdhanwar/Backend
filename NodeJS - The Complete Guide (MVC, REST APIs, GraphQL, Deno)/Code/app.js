@@ -1,6 +1,22 @@
 const http = require("http");
-const routes = require("./routes");
-const PORT_NUMBER = 3000;
 
-const server = http.createServer(routes);
+const express = require("express");
+
+const PORT_NUMBER = 3000;
+const app = express();
+
+// Add a Middleware, next is a function
+app.use((req, res, next) => {
+  console.log("In Middleware");
+  next(); //  Allows the request to continue to next Middleware
+});
+
+// Will not be executed until next() from previous Middleware
+app.use((req, res, next) => {
+  console.log("In Another Middleware");
+  //   We need not to write headers, attached a body of type any
+  res.send("<h1>Hello from Express!!</h1>");
+});
+
+const server = http.createServer(app);
 server.listen(PORT_NUMBER);
