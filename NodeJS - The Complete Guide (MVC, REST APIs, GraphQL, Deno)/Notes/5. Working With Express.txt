@@ -21,19 +21,20 @@
     Request > Middleware(req,res,next)=>{} > next() > Middleware(req,res,next)=>{} > res.send() > Response
 
     const express = require("express");
-    const PORT_NUMBER = 3000;
+
     const app = express();
 
     // Add a Middleware, next is a function
     app.use((req, res, next) => {
       console.log("In Middleware");
-      next(); //  Allows the request to continue to next Middleware
+      next();
     });
     // Will not be executed until next() from previous Middleware
     app.use((req, res, next) => {
       console.log("In Another Middleware");
     });
-    app.listen(PORT_NUMBER);
+
+    app.listen(3000);
 
 (Lec-62) - How Middleware Works
     // Will not be executed until next() from previous Middleware
@@ -75,7 +76,7 @@
     });
 
 (Lec-66) - Limiting Middleware Execution to POST Requests
-    app.get()/app.post() instead of app.use()
+    app.get() OR app.post() instead of app.use()
 
 (Lec-67) - Using Express Router
     const adminRoutes = require("./routes/admin");
@@ -112,7 +113,7 @@
     const router = express.Router();
 
     router.get("/add-product", (req, res, next) => {
-      res.sendFile(path.join(__dirname, "..", "admin", "add-product.html"));
+      res.sendFile(path.join(__dirname, "..", "admin", "add-product.html")); // __dirname is the path to current file
     });
 
 (Lec-72) - Returning a 404 Page

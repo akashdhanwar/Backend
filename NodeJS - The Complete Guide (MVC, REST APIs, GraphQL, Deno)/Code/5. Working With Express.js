@@ -1,20 +1,21 @@
-const http = require("http");
+const path = require("path");
 
 const express = require("express");
+const bodyParser = require("body-parser");
 
-const PORT_NUMBER = 3000;
 const app = express();
 
-// Ass a Middleware, next is a function
+const adminRoutes = require("./routes/admin");
+const shopRoutes = require("./routes/shop");
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use("/admin", adminRoutes);
+app.use(shopRoutes);
+
 app.use((req, res, next) => {
-  console.log("In Middleware");
-  next();
+  res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
 });
 
-// Will not be executed until next() from previous Middleware
-app.use((req, res, next) => {
-  console.log("In Another Middleware");
-});
-
-const server = http.createServer(app);
-server.listen(PORT_NUMBER);
+app.listen(3000);
