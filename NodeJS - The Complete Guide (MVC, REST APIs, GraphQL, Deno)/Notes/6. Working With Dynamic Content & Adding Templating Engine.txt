@@ -1,2 +1,17 @@
 (Lec-79) - Module Introduction
 (Lec-80) - Sharing Data Across Requests and Users
+    Use variables to store data
+
+    const products = [];
+    // /admin/add-product => POST
+    router.post("/add-product", (req, res, next) => {
+      products.push({ title: req.body.title });
+      res.redirect("/");
+    });
+
+    We can export it from here and use the variable in other file
+    It will show the updated value, even on other Browser
+    The data is inherent to Node server
+
+(Lec-81) - Templating Engines - An Overview
+
