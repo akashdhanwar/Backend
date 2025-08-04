@@ -14,4 +14,17 @@
     The data is inherent to Node server
 
 (Lec-81) - Templating Engines - An Overview
+    For Dynamic Content
+    HTMLish Template with some blanks/placeholders
+    We also have Node/Express Content in our app like products 
+    We have a Templating Engine that understands a certain syntax and scans HTMLish Template
+    Then, replaces placeholders/snippets with HTML Content
+    And then sends back the HTML file
+
+    Available Templating Engines - 
+    EJS             -   <p><%= name %></p>  -   Use normal HTML and plain JS in your templates
+    Pug(Jade)       -   p #{name}           -   Use minimal HTML and custom template language
+    Handlebars      -   <p>{{name}}</p>     -   Use normal HTML and custom template language
+
+(Lec-82) - Installing and Implementing Pug
 
