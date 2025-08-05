@@ -27,4 +27,21 @@
     Handlebars      -   <p>{{name}}</p>     -   Use normal HTML and custom template language
 
 (Lec-82) - Installing and Implementing Pug
+    npm i --save ejs pug express-handlebars
+    app.set() allows us to set global values on our express application, like view and 'view engine'
 
+    app.set('view engine', 'pug');
+    app.set('views', 'views');
+
+    Add a pug template in views - shop.pug
+
+    router.get("/", (req, res, next) => {
+      res.render("shop");
+    });
+
+(Lec-83) - Outputting Dynamic Content
+(Lec-84) - Official Pug Docs
+    https://pugjs.org/api/getting-started.html
+
+(Lec-85) - Converting HTML Files to Pug
+(Lec-86) - Adding a Layout
