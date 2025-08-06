@@ -54,3 +54,7 @@
     npm install --save express-handlebars@3.0
 
 (Lec-89) - Working With Handlebars
+    Engine name we define should match with engine name and the extension of file
+
+(Lec-90) - Converting our Project to Handlebars
+(Lec-91) - Adding the Layouts to Handlebars
