@@ -45,3 +45,12 @@
 
 (Lec-85) - Converting HTML Files to Pug
 (Lec-86) - Adding a Layout
+    Add layouts, hook parts using block
+    extends filepath
+    block styles
+
+(Lec-87) - Finishing the Pug Template
+(Lec-88) - Avoiding an Error
+    npm install --save express-handlebars@3.0
+
+(Lec-89) - Working With Handlebars
