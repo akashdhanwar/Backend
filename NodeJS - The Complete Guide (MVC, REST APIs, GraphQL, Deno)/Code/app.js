@@ -32,7 +32,7 @@ const expressHbs = require("express-handlebars");
 
 const app = express();
 
-app.engine("handlebars", expressHbs()); // Since not built in
+app.engine("handlebars", expressHbs({layoutsDir: 'views/layouts/', defaultLayout: 'main-layout', extname: 'handlebars'})); // Since not built in
 app.set("view engine", "handlebars");
 app.set("views", "views");
 
