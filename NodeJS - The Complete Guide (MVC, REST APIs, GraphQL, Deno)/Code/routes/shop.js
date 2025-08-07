@@ -1,25 +1,7 @@
-const path = require("path");
-
 const express = require("express");
-
-const rootDir = require("../util/path");
-const adminData = require("./admin");
-
 const router = express.Router();
+const productsController = require("../controllers/products");
 
-router.get("/", (req, res, next) => {
-  // console.log(adminData.products);
-  // res.sendFile(path.join(rootDir, "views", "shop.html"));
-  const products = adminData.products;
-  res.render("shop", {
-    prods: products,
-    pageTitle: "Shop",
-    path: "/",
-    hasProducts: products.length > 0,
-    activeShop: true,
-    productCSS: true,
-    // layout: false  // Disable layouts
-  });
-});
+router.get("/", productsController.getProducts);
 
 module.exports = router;

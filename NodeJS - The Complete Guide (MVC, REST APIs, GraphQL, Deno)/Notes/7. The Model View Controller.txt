@@ -1,0 +1,12 @@
+(Lec-97) - Module Introduction
+(Lec-98) - What is the MVC
+    Separation of Concerns
+    Models          -   Represent data in code, Work with data like save, fetch, etc
+    Views           -   What the user sees, Decoupled from your application code
+    Controllers     -   Connecting your Models with Views, contains the in-between logic
+    Routes defines the controllers
+    Controllers are split across middleware functions
+
+(Lec-99) - Adding Controllers
+(Lec-100) - Finishing the Controllers
+(Lec-101) - Adding a Product Model 
