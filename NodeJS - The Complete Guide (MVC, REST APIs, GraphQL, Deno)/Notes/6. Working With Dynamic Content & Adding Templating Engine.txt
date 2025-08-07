@@ -60,4 +60,21 @@
 (Lec-91) - Adding the Layouts to Handlebars
 (Lec-92) - Working With EJS
     We will be using in course
-    
+
+(Lec-93) - Working on the Layout with Partials/includes
+(Lec-94) - Wrap Up 
+    We render template by using special render method provided by Express
+    It looks for the registered view engine in app.js
+    It then loads the file with the configurations like variables passed in render
+
+#### Assignment 4: Time to Practice - Templating Engines
+    Create a npm project and install Express and Nodemon, and also install a templating engine
+    Add two routes  -   '/' holds a <form> that allows users to input their name
+                        '/users' Outputs an <ul> with the user name (or some error text)
+    Use layouts/includes
+
+(Lec-95) - [OPTIONAL] Assignment Solution
+(Lec-96) - Useful Resources & Links 
+    Pug Docs: https://pugjs.org/api/getting-started.html
+    Handlebars Docs: https://handlebarsjs.com/
+    EJS Docs: http://ejs.co/#docs
