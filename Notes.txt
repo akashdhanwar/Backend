@@ -4,9 +4,9 @@ ENVIRONMENT SETUP -
 JDK - Is a software used to create and run Java Programs
 IntelliJ/Eclipse - Code Editor
 
-JDK Installation - java.sun.com, downlod v17
+JDK Installation - https://www.java.sun.com, downlod v17
 
-JShell is the REPL of Java - docs.oracle.com/en/javase/17/jshell/introduction-jshell.html
+JShell is the REPL of Java - https://www.docs.oracle.com/en/javase/17/jshell/introduction-jshell.html
 CMD > jshell
 > /help intro
 > /help
@@ -17,6 +17,26 @@ java code multiline
 }
 > /exit
 
-> System.out.print("Hello World"); // Statement
+> System.out.print("Hello World"); // Statement is complete command to be executed
 
 VARIABLES, KEYWORDS, INTEGER(int) Data Type -
+Keyword is any one of a number of reserved words, that have a predefined meaning in the Java language
+In Java, all code is case sensitive including keywords. int is not same as Int. int is a keyword in Java
+https://www.docs.oracle.com/javase/specs/jls/se17/html/jls-3.html#jls-3.9
+
+Variables are a way to store information in our computers RAM.
+Can be accessed by name we give them,
+
+Data Types - Primitive and Non Primitive
+> int num = 5; // Declaration Statement
+Initialize before use
+> System.out.print(num);
+> num = 10;
+> System.out.print(num);
+> num = 10 + 5;
+> System.out.print(num);
+> /list
+
+Expression is a coding construct, that evaluates to a single value
+
+
