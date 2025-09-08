@@ -39,4 +39,8 @@ Initialize before use
 
 Expression is a coding construct, that evaluates to a single value
 
+Operators perform operation on a variable or value
+
+
+
 
