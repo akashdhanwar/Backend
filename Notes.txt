@@ -1,1 +1,7 @@
+JDK 17 vs JDK 21
 
+ENVIRONMENT SETUP -
+JDK - Is a software used to create and run Java Programs
+IntelliJ/Eclipse - Code Editor
+
+Installation - java.sun.com, downlod v17
