@@ -17,7 +17,6 @@ java code multiline
 }
 > /exit
 
-Run Java File -
-java filename.java
-javac classname
+> System.out.print("Hello World"); // Statement
 
+VARIABLES, KEYWORDS, INTEGER(int) Data Type -
