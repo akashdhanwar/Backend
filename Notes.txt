@@ -19,7 +19,7 @@ java code multiline
 
 > System.out.print("Hello World"); // Statement is complete command to be executed
 
-VARIABLES, KEYWORDS, INTEGER(int) Data Type -
+VARIABLES & KEYWORDS -
 Keyword is any one of a number of reserved words, that have a predefined meaning in the Java language
 In Java, all code is case sensitive including keywords. int is not same as Int. int is a keyword in Java
 https://www.docs.oracle.com/javase/specs/jls/se17/html/jls-3.html#jls-3.9
@@ -27,7 +27,6 @@ https://www.docs.oracle.com/javase/specs/jls/se17/html/jls-3.html#jls-3.9
 Variables are a way to store information in our computers RAM.
 Can be accessed by name we give them,
 
-Data Types - Primitive and Non Primitive
 > int num = 5; // Declaration Statement
 Initialize before use
 > System.out.print(num);
@@ -36,10 +35,21 @@ Initialize before use
 > num = 10 + 5;
 > System.out.print(num);
 > /list
+> /var
 
-Expression is a coding construct, that evaluates to a single value
-
+Expression is a coding construct, that evaluates to a single value. It is on the right side of equals sign.
 Operators perform operation on a variable or value
+
+DATA TYPES -
+Primitive Data Types        -   Total 8(int, short, byte, long, float, double, char, boolean)
+                                Range       -   4 Byte  -   Integer.MIN_VALUE(-2^31) to Integer.MAX_VALUE(2^31 - 1)
+                                                1 Byte  -   Byte.MIN_VALUE(-2^7) to Byte.MAX_VALUE(2^7 - 1)
+                                                2 Byte  -   Short.MAX_VALUE(-2^15) to Short.MIN_VALUE(2^15 - 1)
+                                                8 Byte  -   Long.MAX_VALUE(-2^63) to Long.MIN_VALUE(2^63 - 1), 723l or 7231L
+                                Integer is a Wrapper Class, that provides simple operations
+                                Class is a building block that allows us to build custom data types
+                                We need to provide L for long values exceeding Integer range, else error
+                                2_123_345 - Valid java int value
 
 
 
