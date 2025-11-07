@@ -51,6 +51,9 @@ Primitive Data Types        -   Total 8(int, short, byte, long, float, double, c
                                 We need to provide L for long values exceeding Integer range, else error
                                 2_123_345 - Valid java int value
 
-
+Type Casting    -   Casting means convert a number from one type to another
+                    byte myNewByteValue = (myMinByteValue / 2);
+                    byte myNewByteValue = (-128 / 2);
+                    byte myNewByteValue = (byte) (myMinByteValue / 2);
 
 
