@@ -92,3 +92,43 @@ Conslusion
 
 -------------------------------------------------------------------------------------------------------------------------------
 - Data Types
+In Java every variable and every expression has some type
+Each and every variable is clearly defined
+Every assignment should be checked by compiler for type compatibility
+
+1. Because of above reasons, we can conclude java langage is strongly typed programming language
+2. Java is not considered as pure OOP language because several OOP features are not satisfied by java like operator overloading and multiple inheritance
+Moreover, we are depending on primitive data types which are non objects
+
+                                        Primitive Data Types
+                                            /           \
+                                           /             \
+                                        Numeric         Non-Numeric
+                                        /   \           |- char
+                                       /     \          |- boolean
+                                 Integer    Floating
+                                 |- byte    |- float
+                                 |- short   |- double
+                                 |- int
+                                 |- long
+
+Except boolean and char, remaining data types are considered as signed data types because we can represent both positive and negative numbers
+
+1. byte                                          _ _ _ _ _ _ _ _
+    Size        -   1 byte = 8 bits             |_|_|_|_|_|_|_|_| First bit is sign bit(MSB)
+                                                0 = +ve, 1 = -ve
+    MAX_VALUE   -   +127(2^8-1)
+    MIN_VALUE   -   -128(2^8)
+
+    The MSB acts as a sign bit
+    0 means +ve number, 1 means -ve number
+    +ve numbers will be represented directly in the memory whereas -ve numbers will be represented in 2's compliment form
+    Examples    -   byte b = 128;       CE: Possible loss of precision
+                                        found: int, required: byte
+                    byte b = true;      CE: Incompatile Types
+                                        found: boolean, required: byte
+                    byte b = "akash";   Used for streams
+
+    Byte is the best choice if we want to handle data in terms of stream either from a file or network(file supported form/network supported form is byte)
+
+2. short
