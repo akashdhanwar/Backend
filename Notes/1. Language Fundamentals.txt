@@ -106,7 +106,7 @@ Moreover, we are depending on primitive data types which are non objects
                                         Numeric         Non-Numeric
                                         /   \           |- char
                                        /     \          |- boolean
-                                 Integer    Floating
+                                 Integral    Floating
                                  |- byte    |- float
                                  |- short   |- double
                                  |- int
@@ -214,3 +214,29 @@ Note    -   null is the default value for Object reference and we cannot apply f
 
 -------------------------------------------------------------------------------------------------------------------------------
 - Literals
+A constant value that can be assigned to the variable is called a literal
+
+Integral Literals
+    For integral data types(byte, short, int, long) we can specify literal values in the following ways
+    
+    1. Decimal Form(Base 10)
+        Allowed digits are 0 to 9
+        Example -   int x = 10;
+
+    2. Octal Form(Base 8)
+        Allowed values are 0 to 7
+        Literal values should be prefixed with 0
+        Example -   int x = 010;
+
+    3. Hexadecimal Form(Base 16)
+        Allowed values are 0 to 9 and a to f
+        For extra digits(a to f) we can use both uppercase and lowercase characters
+        This is one of very few areas where java is not case sensitive
+        Should be prefixed with 0x or 0X 
+        Example -   int x = 0x10;
+
+    These are only possible ways to specify literal values for integral data types
+    Example     -   int x = 0786;       CE: Integer number too large
+
+Floating Point Literals
+    
