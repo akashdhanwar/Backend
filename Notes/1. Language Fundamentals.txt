@@ -164,4 +164,50 @@ Note -  All the above datatypes(byte, short, int, long) meant for representing i
         If we eant to represent floating point values then we should go for floating data types
 
 5. float
-    
+    Size        -   4 bytes
+    MAX_VALUE   -   3.4028235E38 OR 3.4*10^38
+    MIN_VALUE   -   -1.4E-45 OR 1.4*10^-45
+
+    If we want 5 to 6 decimals places of accuracy
+    Single precision
+
+6. double
+    Size        -   8 bytes
+    MAX_VALUE   -   1.7976931348623157E308
+    MIN_VALUE   -   4.9E-324
+
+    If we want 14 to 15 decimal places of accuracy
+    Double precision
+
+7. boolean
+    Size        -   NA(Virtual Machine Dependent)
+    Range       -   NA(but allowed values are true/false)
+
+    Example     -   boolean b = True;       CE: cannot find symbol
+
+8. char
+    Size        -   2 bytes
+    Range       -   0 to 65535
+
+    Old languages like(C/C++) are ASCII code based and the number of different allowed ASCII code characters are less than or equal to 256
+    To represent these 256 characters, 8 bits are enough. Hence the size of char in old languages is 1 byte
+    Java is unicode based and the number of unicode characters are >256 and <65536
+    To represent these many characters 8 bits may not be enough, compulsary we should go for 16 bits
+    Hence size of char in java is 2 bytes
+
+Summary 
+    -------------------------------------------------------------------------------------------------------------
+    Data Type   |   Size(bytes) |   Range                               |   Wrapper Class   |   Default Vaalue  |
+    -------------------------------------------------------------------------------------------------------------
+    byte        |       1       |   -128 to 127                         |   Byte            |       0           |
+    short       |       2       |   -32768 to 32767                     |   Short           |       0           |
+    int         |       4       |   -2^31 to 2^31-1                     |   Integer         |       0           |
+    long        |       8       |   -2^63 to 2^63-1                     |   Long            |       0           |
+    float       |       4       |   -1.4E-45 to 3.4028235E38            |   Float           |       0.0         |
+    double      |       8       |   4.9E-324 to 1.7976931348623157E308  |   Double          |       0.0         |
+    boolean     |       NA      |   NA                                  |   Boolean         |       false       |
+    char        |       2       |   0 to 65535                          |   Character       |       0(space)    |
+    -------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------
+- Literals
