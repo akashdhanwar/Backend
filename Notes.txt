@@ -17,6 +17,7 @@ java code multiline
 }
 > /exit
 
+------------------------------------------------------------------------------------------------------------------------------
 > System.out.print("Hello World"); // Statement is complete command to be executed
 
 VARIABLES & KEYWORDS -
@@ -44,16 +45,26 @@ DATA TYPES -
 Primitive Data Types        -   Total 8(int, short, byte, long, float, double, char, boolean)
                                 Range       -   4 Byte  -   Integer.MIN_VALUE(-2^31) to Integer.MAX_VALUE(2^31 - 1)
                                                 1 Byte  -   Byte.MIN_VALUE(-2^7) to Byte.MAX_VALUE(2^7 - 1)
-                                                2 Byte  -   Short.MAX_VALUE(-2^15) to Short.MIN_VALUE(2^15 - 1)
-                                                8 Byte  -   Long.MAX_VALUE(-2^63) to Long.MIN_VALUE(2^63 - 1), 723l or 7231L
+                                                2 Byte  -   Short.MIN_VALUE(-2^15) to Short.MAX_VALUE(2^15 - 1)
+                                                8 Byte  -   Long.MIN_VALUE(-2^63) to Long.MAX_VALUE(2^63 - 1), 723l or 7231L
+                                                4 Byte  -   Float.MIN_VALUE(1.4E-45 OR 1.4*10^-45) to Float.MAX_VALUE(3.4028235E38 OR 3.4*10^38)
+                                                8 Byte  -   Double.MIN_VALUE(4.9E-324) to Double.MAX_VALUE(1.7976931348623157E308)
                                 Integer is a Wrapper Class, that provides simple operations
                                 Class is a building block that allows us to build custom data types
                                 We need to provide L for long values exceeding Integer range, else error
                                 2_123_345 - Valid java int value
+                                int and double are default types
+
+Syntax          -   byte b = 10;
+                    short s = 10;
+                    int i = 10;
+                    long l = 10l;
+                    float f = 10f;
+                    double d = 10d;
+
+                -   float f = 10.5;
 
 Type Casting    -   Casting means convert a number from one type to another
                     byte myNewByteValue = (myMinByteValue / 2);
                     byte myNewByteValue = (-128 / 2);
                     byte myNewByteValue = (byte) (myMinByteValue / 2);
-
-

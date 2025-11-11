@@ -1,0 +1,17 @@
+OOPS 
+
+- Data Hiding
+- Abstraction
+- Encapsulation
+- Tightly Encapsulated Class
+- Is-A Relationship
+- Has-A Relationship
+- Method Signature
+- Overloading
+- Overriding
+- Static Control Flow
+- Instance Control Flow
+- Constructors
+- Coupling
+- Cohesion
+- Type Casting

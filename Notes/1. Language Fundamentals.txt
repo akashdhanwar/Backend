@@ -1,0 +1,94 @@
+LANGUAGE FUNDAMENTALS
+
+- Identifiers
+- Reserved Words
+- Data Types 
+- Literals
+- Arrays
+- Types of variables 
+- var-arg arguments
+- main method
+- command line arguments
+- Java coding standards
+
+-------------------------------------------------------------------------------------------------------------------------------
+- Identifiers
+A name in java program is called identifier which can be used for identification purpose
+It can be a method name or variable name or class name or label name
+
+class Test {
+    public static void main(String[] args){
+        int x = 10;
+    }
+}
+Test, main, String, args, x are Identifiers
+
+Rules for defining Java Identifiers
+1.  Only allowed characters are 
+    a-z, A-Z, 0-9, $, _ 
+    If we are using any other character, we will get CE
+    Example -   total_number is correct
+                total# is incorrect
+2.  Identifiers cannot start with digits
+    total123 is correct
+    123total is incorrect
+3.  Java Identifiers are case sensitive. Ofcourse Java is case sensitive
+4.  There is no length limit for java identifiers but it is not recommended to use too lenthy identifiers
+5.  We cannot use reserved words as Identifiers
+    int if = 20; is incorrect
+6.  All predefined Class names and Interface names we can use as Identifiers.
+    But it is not a good programming practice
+
+QUESTION 
+Which are valid identifiers in Java
+    total_number
+    total#
+    123total
+    total123
+    ca$h
+    _$_$_$
+    all@hands
+    java2share
+    Integer
+    Int
+    int
+
+-------------------------------------------------------------------------------------------------------------------------------
+- Reserved Words
+In Java, some words are reserved to represent some meaning/functionality.
+Such type of words are called reserved words
+
+                                        Reserved Words(53)
+                                            /   \
+                                           /     \
+                                Keywords(50)    Reserved Literals(3)
+                                  /  \          |- true
+                                 /    \         |- false
+                                /      \        |- null
+                               /        \
+                  Used Keywords(48)   Unused Keywords(2)       
+                                      |-  goto
+                                      |- const 
+            
+    Data Types(8)       -   byte, short, int, long, float, double, char, boolean
+    Flow Control(11)    -   if, else, switch, case, default, while, do, break, continue, return
+    Modifiers(11)       -   public, private, protected, static, final, abstract, synchronized, native, strictfp, transient, volatile
+    Exception(6)        -   try, catch, throw, throws, finally, assert
+    Class(6)            -   class, interface, extends, implements, package, import
+    Object(4)           -   new, instanceof, super, this
+    void return type    -   In Java, return type is mandatory
+                            If a method wont return anything then we have to declare that method with void return type
+    Unused(2)           -   goto    -   Usage of goto created several problems in old languages hence SUN people banned this keyword in Java
+                            const   -   use final instead of const 
+                            Note -  goto and const are unused keyword and if we are trying to use, we will get CE 
+    Reserved Literals(3)-   true, false -   value for boolean data types
+                            null        -   default value for Object reference
+    enum keyword        -   We can use enum to define a group of named concepts
+                            Example - enum Month { JAN, FEB, ...., DEC; }
+
+Conslusion 
+1. All 53 reserved words in java contains only lowercase alphabets symbols
+2. In java, we have only new keyword and no delete keyword because destruction of useless objects is responsibility of GC
+
+-------------------------------------------------------------------------------------------------------------------------------
+- Data Types
