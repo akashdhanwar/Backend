@@ -117,8 +117,8 @@ Except boolean and char, remaining data types are considered as signed data type
 1. byte                                          _ _ _ _ _ _ _ _
     Size        -   1 byte = 8 bits             |_|_|_|_|_|_|_|_| First bit is sign bit(MSB)
                                                 0 = +ve, 1 = -ve
-    MAX_VALUE   -   +127(2^8-1)
-    MIN_VALUE   -   -128(2^8)
+    MAX_VALUE   -   +127(2^7-1)
+    MIN_VALUE   -   -128(-2^7)
 
     The MSB acts as a sign bit
     0 means +ve number, 1 means -ve number
@@ -132,3 +132,36 @@ Except boolean and char, remaining data types are considered as signed data type
     Byte is the best choice if we want to handle data in terms of stream either from a file or network(file supported form/network supported form is byte)
 
 2. short
+    Size        -   2 bytes -> 16 bits
+    MAX_VALUE   -   32767(2^15-1)
+    MIN_VALUE   -   -32768(-2^15)
+
+    This is most rarely used data type in java
+    Best suitable for 16-bit processors like 8085 but these processors are completely outdated, hence short is also outdated data type
+    Example     -   short s = 32768;    CE: Possible loss of precision
+
+3. int
+    Size        -   4 bytes -> 32 bits
+    MAX_VALUE   -   2147483647(2^31-1)
+    MIN_VALUE   -   -2147483648(-2^31)
+
+    The most commonly used data type is int
+    Examples    -   int x = 2147483648;     CE: Integer number too large
+                    int x = 2147483648l;    CE: Possible loss of precision
+
+4. long
+    Size        -   8 bytes -> 64 bits
+    MAX_VALUE   -   2^63-1
+    MIN_VALUE   -   -2^63
+
+    Sometimes int may not be enough to hold big values, then we should go for long type
+    Example     -   The amount of distance travelled by light in 1000 days
+                    long l = 126000*60*60*24*1000 miles
+    Example     -   The number of characters present in a big file may exceed int range, hence return type of length() is long and not int
+                    long f = f.length();
+
+Note -  All the above datatypes(byte, short, int, long) meant for representing integral values
+        If we eant to represent floating point values then we should go for floating data types
+
+5. float
+    
