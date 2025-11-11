@@ -209,5 +209,8 @@ Summary
     char        |       2       |   0 to 65535                          |   Character       |       0(space)    |
     -------------------------------------------------------------------------------------------------------------
 
+Note    -   null is the default value for Object reference and we cannot apply for primitives
+            If we are trying to use for primitive then CE: Incompatible types
+
 -------------------------------------------------------------------------------------------------------------------------------
 - Literals
