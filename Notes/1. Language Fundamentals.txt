@@ -196,18 +196,18 @@ Note -  All the above datatypes(byte, short, int, long) meant for representing i
     Hence size of char in java is 2 bytes
 
 Summary 
-    -------------------------------------------------------------------------------------------------------------
-    Data Type   |   Size(bytes) |   Range                               |   Wrapper Class   |   Default Vaalue  |
-    -------------------------------------------------------------------------------------------------------------
-    byte        |       1       |   -128 to 127                         |   Byte            |       0           |
-    short       |       2       |   -32768 to 32767                     |   Short           |       0           |
-    int         |       4       |   -2^31 to 2^31-1                     |   Integer         |       0           |
-    long        |       8       |   -2^63 to 2^63-1                     |   Long            |       0           |
-    float       |       4       |   -1.4E-45 to 3.4028235E38            |   Float           |       0.0         |
-    double      |       8       |   4.9E-324 to 1.7976931348623157E308  |   Double          |       0.0         |
-    boolean     |       NA      |   NA                                  |   Boolean         |       false       |
-    char        |       2       |   0 to 65535                          |   Character       |       0(space)    |
-    -------------------------------------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------------------------------
+    |   Data Type   |   Size(bytes) |   Range                               |   Wrapper Class   |   Default Vaalue  |
+    -----------------------------------------------------------------------------------------------------------------
+    |   byte        |       1       |   -128 to 127                         |   Byte            |       0           |
+    |   short       |       2       |   -32768 to 32767                     |   Short           |       0           |
+    |   int         |       4       |   -2^31 to 2^31-1                     |   Integer         |       0           |
+    |   long        |       8       |   -2^63 to 2^63-1                     |   Long            |       0           |
+    |   float       |       4       |   -1.4E-45 to 3.4028235E38            |   Float           |       0.0         |
+    |   double      |       8       |   4.9E-324 to 1.7976931348623157E308  |   Double          |       0.0         |
+    |   boolean     |       NA      |   NA                                  |   Boolean         |       false       |
+    |   char        |       2       |   0 to 65535                          |   Character       |       0(space)    |
+    -----------------------------------------------------------------------------------------------------------------
 
 Note    -   null is the default value for Object reference and we cannot apply for primitives
             If we are trying to use for primitive then CE: Incompatible types
@@ -235,8 +235,64 @@ Integral Literals
         Should be prefixed with 0x or 0X 
         Example -   int x = 0x10;
 
+    4. Binary Literals(Base 2)(1.7V Enhancements)
+        For integral data types until 1.6V we can specify literal values in decimal, octal and hexadecimal form
+        But from 1.7V we can specify literal values even in binary form
+        Allowed values are 0 and 1, Literal values should be prefixed with 0B or 0b
+        Example -   int x = 0B1111;
+
     These are only possible ways to specify literal values for integral data types
     Example     -   int x = 0786;       CE: Integer number too large
 
 Floating Point Literals
-    
+    QUESTION    -   float f = 123.456;      -   CE: Possible loss of precision
+                    float f = 123.456f;
+                    double d = 12.43d;      -   Not required
+
+                    double d = 0X123.456;   -   CE: Malformed floating point literal(Only in decimal forms)
+
+                    double d = 0786;        -   CE: Integer number too large
+                    double d = 0XFace;
+                    double d = 10;
+
+                    double d = 1.2e3;       -   1200.0
+                    float f = 1.2e3;
+                    float f = 1.2e3f;
+
+Boolean Literals
+    The only allowed values are ture/false
+
+Char Literals
+    QUESTION    -   char ch = 'a';
+                    char ch = 'ab';         -   CE: unclosed char literal, not a statement 
+
+                    char ch = 97;           -   Unicode value - decimal/octal/hexa range, 0 to 65535
+                    char ch = 0XFace;
+                    char ch = 65536;
+
+                    '\uxxxx'                -   xxxx is hexadecimalnumber, in unicode representation
+                    char ch = '\u0061';     -   a
+
+                    char ch = '\n';         -   Escape Literals
+                    char ch = '\t';
+                    char ch = '\m';         -   Illegal escape character
+
+Escape characters(8)
+    -------------------------------------------------
+    |   Escape Character    |   Description         |
+    -------------------------------------------------
+    |       \n              |   New line            |
+    |       \t              |   Horizontal tab      |
+    |       \r              |   Carriage return     |
+    |       \b              |   Backspace           |
+    |       \f              |   Formfield           |
+    |       \'              |   Single quote        |
+    |       \"              |   Double quote        |
+    |       \\              |   Backslash           |
+    -------------------------------------------------
+
+String Literals
+    Any sequence of characters within " " is treated string literal
+    Example     -   String s = "akash";
+
+1.7V Enhancements wrt Literals
