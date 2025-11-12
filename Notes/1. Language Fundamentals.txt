@@ -295,4 +295,28 @@ String Literals
     Any sequence of characters within " " is treated string literal
     Example     -   String s = "akash";
 
-1.7V Enhancements wrt Literals
+Usage of '_' symbol in numeric literals(1.7V Enhancements)
+    double d = 1_23_456.7_8_9;              -   Compiles to 123456.789
+    From 1.7V onwards, we can use '_' symbol b/w digits of numeric literal
+    Advantage is readability of code will be improved
+    At the time of compilation, '_' symbols will be removed automatically, hence after compilation 123456.789
+
+    double d = 1__23_4_5__6.7_8_9;
+    We can use more than one '_' symbol also between the digits
+
+    double d = _1_234_56.7_8_9;
+    double d = 1_2_3_4_56_.7_8_9;
+    double d = 1_2_3_4_56.7_8_9_;
+    We can use underscore symbol only between digits else CE
+
+Note:   byte    ---->   short   ---
+        (1B)             (2B)       \ ____  int     ---->   long    ---->   float   ---->   double
+                                    /       (4B)            (8B)            (4B)            (8B)
+        char    -------------------
+        (2B)
+        
+        8B long values we can assign to 4B float variables because both are following different memory representations internally
+        float f = 10l;      -   10.0
+
+-------------------------------------------------------------------------------------------------------------------------------
+- Arrays
