@@ -273,7 +273,9 @@ Char Literals
                     char ch = 65536;
 
                     '\uxxxx'                -   xxxx is hexadecimalnumber, in unicode representation
-                    char ch = '\u0061';     -   a
+                    char ch = '\u0044';     -   D
+                    char ch = 68;           -   D
+                    char ch = 'D';
 
                     char ch = '\n';         -   Escape Literals
                     char ch = '\t';
@@ -295,7 +297,10 @@ Escape characters(8)
 
 String Literals
     Any sequence of characters within " " is treated string literal
+    String class is Immutable, but can be used much like a primitive type
+    StringBuilder class is mutable
     Example     -   String s = "akash";
+                    System.out.print(10+10+"10"+10+10+true);
 
 Usage of '_' symbol in numeric literals(1.7V Enhancements)
     double d = 1_23_456.7_8_9;              -   Compiles to 123456.789
