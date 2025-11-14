@@ -127,7 +127,6 @@ Except boolean and char, remaining data types are considered as signed data type
                                         found: int, required: byte
                     byte b = true;      CE: Incompatile Types
                                         found: boolean, required: byte
-                    byte b = "akash";   Used for streams
 
     Byte is the best choice if we want to handle data in terms of stream either from a file or network(file supported form/network supported form is byte)
 
@@ -139,6 +138,7 @@ Except boolean and char, remaining data types are considered as signed data type
     This is most rarely used data type in java
     Best suitable for 16-bit processors like 8085 but these processors are completely outdated, hence short is also outdated data type
     Example     -   short s = 32768;    CE: Possible loss of precision
+                    short s = 123l;     CE: Possible loss of precision
 
 3. int
     Size        -   4 bytes -> 32 bits
@@ -148,6 +148,7 @@ Except boolean and char, remaining data types are considered as signed data type
     The most commonly used data type is int
     Examples    -   int x = 2147483648;     CE: Integer number too large
                     int x = 2147483648l;    CE: Possible loss of precision
+                    int x = 123l;           CE: Possible loss of precision
 
 4. long
     Size        -   8 bytes -> 64 bits
@@ -194,6 +195,7 @@ Note -  All the above datatypes(byte, short, int, long) meant for representing i
     Java is unicode based and the number of unicode characters are >256 and <65536
     To represent these many characters 8 bits may not be enough, compulsary we should go for 16 bits
     Hence size of char in java is 2 bytes
+    https://symbl.cc/en/unicode-table
 
 Summary 
     -----------------------------------------------------------------------------------------------------------------
@@ -317,6 +319,8 @@ Note:   byte    ---->   short   ---
         
         8B long values we can assign to 4B float variables because both are following different memory representations internally
         float f = 10l;      -   10.0
+
+BigDecimal Class should be used for precision calculations
 
 -------------------------------------------------------------------------------------------------------------------------------
 - Arrays
