@@ -21,3 +21,28 @@ OPERATORS AND ASSIGNMENTS
 
 -------------------------------------------------------------------------------------------------------------------------------
 - Increment and Decrement Operators
+Includes pre and post operators
+
+    -------------------------------------------------------------------------
+    |   Expression   |   Initial(x)     |   Value of y      |   Final(x)    |
+    -------------------------------------------------------------------------
+    |   y = ++x;     |       10         |   11              |   11          |
+    |   y = x++;     |       10         |   10              |   11          |
+    |   y = --x;     |       10         |   9               |   9           |
+    |   y = x--;     |       10         |   10              |   9           |
+    -------------------------------------------------------------------------
+
+    Only for variables and not for constants. Example -   int y = ++(++x);    CE: required variable, found value
+    For final variables, no increment/decrement
+    For every primitives except boolean
+    
+    Difference between b=b+1 and b++
+    b = b + 1;  -   byte b = 10;
+                    b = b + 1;          
+                    sop(b);
+                    CE: Possible loss of precision
+                    b = (byte)(b+1);
+    b++;        -   b = byte
+                    b = (type of b)(b+1)
+                    Internal Type Casting
+
