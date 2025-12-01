@@ -32,7 +32,8 @@ Includes pre and post operators
 |   y = x--;     |       10         |   10              |   9           |
 -------------------------------------------------------------------------
 
-Only for variables and not for constants. Example -   int y = ++(++x);    CE: required variable, found value
+Only for variables and not for constants. 
+    Example -   int y = ++(++x);    CE: required variable, found value
 For final variables, no increment/decrement
 For every primitives except boolean
     
