@@ -50,4 +50,64 @@ Difference between b=b+1 and b++
 
 -------------------------------------------------------------------------------------------------------------------------------
 - Arithmetic Operators
-Result type - max(int, type of a type of b)
+Result type - max(int, type of a, type of b)
+
+Infinity
+    In integral arithmetic(byte, short, int, long) there is no way to represent Infinity. Hence ArithmeticException
+    Example -   sop(10/0);      RE: ArithmeticException
+    
+    But in floating point arithmetic(float and double) there is a way to represent Infinity.
+    For this, Float and Double classes contains the following two constants 
+    POSITIVE_INFINITY
+    NEGATIVE_INFINITY
+    Hence even though result is Infinity, no ArithmeticException in floating point arithmetic
+    Example -   sop(10.0/0);        Infinity
+                sop(-10.0/0);       -Infinity
+                sop(0/0);           RE: Division by zero
+                sop(0.0/0);         NaN 
+
+NaN(Not a Number)
+    In integral arithmetic, there is no way to define undefined hence RE
+    But there is a way in floating point arithmetic
+    For this, Float and Double classes contains NaN constant
+    Example -   sop(-0.0/0);
+
+    sop(10 < Float.NaN);                false
+    sop(10 <= Float.NaN);               false
+    sop(10 > Float.NaN);                false
+    sop(10 >= Float.NaN);               false
+    sop(10 == Float.NaN);               false
+    sop(Float.NaN == Float.NaN);        false
+    sop(10 <!= Float.NaN);              true
+    sop(Float.NaN != Float.NaN);        true
+    
+Summary 
+    Arithmetic Operators gives RE and not CE
+    Possible in integral arithmetic but not in floating point
+    Only operators that cause ArithmeticException are / and %
+
+-------------------------------------------------------------------------------------------------------------------------------
+- String Concatenation Operator(+)
+The only overloaded operator in java is + operator
+Sometimes it act as addition operator sometimes as string concatenation operator
+Examples    -   String a = "akash";
+                int b = 10, c = 20, d = 30;
+                sop(a+b+c+d);           akash102030
+                sop(b+c+d+a);           60akash
+                sop(c+d+a+b);           50akash10
+                sop(d+a+b+c);           30akash1020
+
+-------------------------------------------------------------------------------------------------------------------------------
+- Relational Operators(<, <=, >, >=)
+We can apply relational operator for every primitive except boolean
+We cant apply for object types
+Nesting of relational operators not allowed
+Examples    -   sop(10 < 20);                   true
+                sop('a' < 10);                  false
+                sop('a' < 97.6);                true
+                sop(true < false);              CE
+                sop("akash" < "dhanwar");       CE
+                sop(10 < 20 < 30);              CE(true < 30)
+
+-------------------------------------------------------------------------------------------------------------------------------
+- Equality Operators(==, !=)
