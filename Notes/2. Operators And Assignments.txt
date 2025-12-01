@@ -111,3 +111,57 @@ Examples    -   sop(10 < 20);                   true
 
 -------------------------------------------------------------------------------------------------------------------------------
 - Equality Operators(==, !=)
+We can apply for every primitives including boolean
+We can apply for object types also. There should be relation between objects else CE: Incompatible Types
+Examples    -   sop(10 == 20);                  false
+                sop('a' == 97.0);               true
+                sop(false == false);            true
+                Thread t1 = new Thread();
+                Thread t2 = new Thread();
+                Thread t3 = t1;
+                sop(t1 == t3);                  true
+
+-------------------------------------------------------------------------------------------------------------------------------
+- instanceof Operator
+r instanceof x
+r = Object Reference 
+x = Class/Interface name
+
+r and x must have some relation else CE: Inconvertable Types
+Example     -   sop(null instanceof x);         false
+
+-------------------------------------------------------------------------------------------------------------------------------
+- Bitwise Operator(&, |, ^)
+& = AND         true If both true
+| = OR          true If atleat one true
+^ = X-OR        true If both different
+We can also apply these for integral types
+
+Examples    -   sop(4 & 5);                     4(100 & 101 = 100 = 4)
+                sop(4 | 5);                     5(100 | 101 = 101 = 5)
+                sop(4 ^ 5);                     1(100 ^ 101 = 001 = 1)
+                sop(true & false);              false
+
+- Bitwise Compliment Operator(~)
+Only for integral and not for boolean
+MSD acts as a sign bit
++ve numbers represent directly
+-ve numbers in 2'nd complement form
+Examples    -   sop(~true);                     CE
+                sop(~4);                        -5(4 = 0 0000....0100)
+                                                  (~4 = 1 1111....1011)
+                                                  (1's complement + 1 = 1 0000....0101)
+                                                  (1 0000....0101 = -5)
+
+- Boolean Complement Operator(!)
+Only for boolean types
+Examples    -   sop(!true);                     false
+                sop(!4);                        CE
+
+Summary 
+    & | ^   -   for both integral and boolean
+    ~       -   for integral
+    !       -   for boolean
+
+-------------------------------------------------------------------------------------------------------------------------------
+- Short Circuit Operators
