@@ -4,4 +4,13 @@
 javac filename.java
 java filename
 
+      |  Java Code(.java) |
+      |  Compiler(javac)  |
+      |  Bytecode(.class) |
+    |      JDK              |
+     |     JRE(libraries)  |
+      |    JVM            |
+      |    OS             |
+      |  Hardware         |
 
+JVM takes byte code 
