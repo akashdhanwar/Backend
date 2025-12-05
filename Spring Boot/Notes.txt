@@ -1,2 +1,7 @@
 > jshell
 > System.out.print("Hello World");
+
+javac filename.java
+java filename
+
+
