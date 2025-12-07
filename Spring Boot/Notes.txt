@@ -14,3 +14,6 @@ java filename
       |  Hardware         |
 
 JVM takes byte code 
+
+Variable      -      To store data/value in a box
+                     Strongly Typed language
