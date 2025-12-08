@@ -4,6 +4,8 @@
 javac filename.java
 java filename
 
+java filename.java
+
       |  Java Code(.java) |
       |  Compiler(javac)  |
       |  Bytecode(.class) |
@@ -28,6 +30,7 @@ Type Conversion   -      a = b;
                          int a = 257;
                          byte b = 10;
                          b = a;                  b will be 257%range = 257%256 = 1
+
 
 
 
