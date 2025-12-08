@@ -281,6 +281,9 @@ Char Literals
                     char ch = '\t';
                     char ch = '\m';         -   Illegal escape character
 
+                    char ch = 'a';
+                    ch++;
+
 Escape characters(8)
     -------------------------------------------------
     |   Escape Character    |   Description         |
