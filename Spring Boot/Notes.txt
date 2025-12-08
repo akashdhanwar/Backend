@@ -25,6 +25,9 @@ Type Casting      -      int a = 10;
                          b = (byte) a;
 Type Conversion   -      a = b;
 
+                         int a = 258;
+                         byte b = 10;
+                         b = a;
 
 
 
