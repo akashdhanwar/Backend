@@ -25,9 +25,10 @@ Type Casting      -      int a = 10;
                          b = (byte) a;
 Type Conversion   -      a = b;
 
-                         int a = 258;
+                         int a = 257;
                          byte b = 10;
-                         b = a;
+                         b = a;                  b will be 257%range = 257%256 = 1
+
 
 
 
