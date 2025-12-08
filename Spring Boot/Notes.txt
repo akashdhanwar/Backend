@@ -31,6 +31,9 @@ Type Conversion   -      a = b;
                          byte b = 10;
                          b = a;                  b will be 257%range = 257%256 = 1
 
+                         float f = 10.5f;
+                         int a = 10;
+                         a = (float) f;
 
 
 
