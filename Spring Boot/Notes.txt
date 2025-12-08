@@ -23,5 +23,8 @@ Literals      -      Value assigned to a variable
 Type Casting      -      int a = 10;
                          byte b = 20;
                          b = (byte) a;
+Type Conversion   -      a = b;
+
+
 
 
