@@ -17,3 +17,5 @@ JVM takes byte code
 
 Variable      -      To store data/value in a box
                      Strongly Typed language
+Data Types    -      Primitives(byte, short, int, float, double, char, boolean, BigInt, Symbol)
+Literals      -      Value assigned to a variable
