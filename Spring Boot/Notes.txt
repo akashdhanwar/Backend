@@ -35,6 +35,9 @@ Type Conversion   -      a = b;
                          int a = 10;
                          a = (float) f;
 
+Type Promotion     -     byte a = 10;
+                         byte b = 20;
+                         int c = a * b;
 
 
 
