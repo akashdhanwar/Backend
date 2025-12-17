@@ -178,21 +178,15 @@ These are same as bitwise operators, except the following differences
 x && y    -    y will be evaluated only if x is true
 x || y    -    y will be evaluated only if x is false
 
-int x = 10;
-int y = 15;
-if(++x < 10 & ++y > 15){
-    x++;
-} else{
-    y++;
-}
-sop(x + " " + y);
-
-int x = 10;
-if(++x < 10 && (x/10 > 10)){
-    sop("Hello");
-} else{
-    sop("Hi");
-}
+Examples -
+    int x = 10;                         |       int x = 10;
+    int y = 15;                         |       if(++x < 10 && (x/10 > 10)){
+    if(++x < 10 & ++y > 15){            |            sop("Hello");
+        x++;                            |       } else {
+    } else{                             |            sop("Hi");
+        y++;                            |       }
+    }                                   |
+    sop(x + " " + y);                   |
 
 -------------------------------------------------------------------------------------------------------------------------------
 - Typecast Operators
