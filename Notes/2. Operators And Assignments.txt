@@ -78,7 +78,7 @@ NaN(Not a Number)
     sop(10 >= Float.NaN);               false
     sop(10 == Float.NaN);               false
     sop(Float.NaN == Float.NaN);        false
-    sop(10 <!= Float.NaN);              true
+    sop(10 != Float.NaN);              true
     sop(Float.NaN != Float.NaN);        true
     
 Summary 
