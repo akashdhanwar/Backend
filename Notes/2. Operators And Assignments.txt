@@ -165,3 +165,32 @@ Summary
 
 -------------------------------------------------------------------------------------------------------------------------------
 - Short Circuit Operators
+These are same as bitwise operators, except the following differences
+
+------------------------------------------------------------------------------------------
+|                   &, |                      |                &&, ||                    |  
+------------------------------------------------------------------------------------------
+|   Both arguments always evaluated           |  Second argument evaluation is optional  |               
+|   Relatively low performance                |  High performance                        |
+|   Applicable for both boolean and integral  |  Applicable only for boolean             |
+------------------------------------------------------------------------------------------
+
+x && y    -    y will be evaluated only if x is true
+x || y    -    y will be evaluated only if x is false
+
+int x = 10;
+int y = 15;
+if(++x < 10 & ++y > 15){
+    x++;
+} else{
+    y++;
+}
+sop(x + " " + y);
+
+int x = 10;
+if(++x < 10 && (x/10 > 10)){
+    sop("Hello");
+} else{
+    sop("Hi");
+}
+
