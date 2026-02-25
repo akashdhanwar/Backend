@@ -258,8 +258,44 @@ Examples -
     a+= b-+ c*= d/= 2;                right to left, -160 -180 200 10
 
 -------------------------------------------------------------------------------------------------------------------------------
-- Conditional Operator(Ternary Operator ?:)
+- Conditional Operator(Ternary Operator ?:)    -    Nesting of Conditional Operator is possible
 
+-------------------------------------------------------------------------------------------------------------------------------
+- new Operator    -    To create an Object
+
+-------------------------------------------------------------------------------------------------------------------------------
+- [] Operator    -    To Declare and Create Arrays
+
+-------------------------------------------------------------------------------------------------------------------------------
+- Operator Preceedence
+
+1. Uranary Operators
+    [], x++, x--
+    ++x, --x, ~, !
+    new, <type>
+2. Arithmetic Operators
+    *, /, %
+    +, -
+3. Shift Operators
+    >>, >>>, <<
+4. Comparison Operators
+    <, <=, >, >=, instanceof
+5. Equality Operators
+    ==, !=
+6. Bitwise Operators
+    &
+    ^
+    |
+7. Short Circuit Operators
+    &&
+    ||
+8. Conditional Operators
+    ?:
+9. Assignment Operators
+    =, +=, -=, *=, ....
+
+-------------------------------------------------------------------------------------------------------------------------------
+- Evaluation order of Java Operands
 
 
 
