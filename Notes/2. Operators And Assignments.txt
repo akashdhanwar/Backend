@@ -78,7 +78,7 @@ NaN(Not a Number)
     sop(10 >= Float.NaN);               false
     sop(10 == Float.NaN);               false
     sop(Float.NaN == Float.NaN);        false
-    sop(10 != Float.NaN);              true
+    sop(10 != Float.NaN);               true
     sop(Float.NaN != Float.NaN);        true
     
 Summary 
@@ -189,4 +189,38 @@ Examples -
     sop(x + " " + y);                   |
 
 -------------------------------------------------------------------------------------------------------------------------------
-- Typecast Operators
+- Typecast Operators(Implicit, Explicit)
+
+- Implicit Type Casting
+Compiler converts chat to int by implicit type casting
+Small to big conversion -> Widening
+
+Example - int x = 'a';
+          sop(x);
+
+- Explicit Type Casting
+If we assign floating point values to integral types by explicit type casting, the digits after decimal points will be lost.
+
+Example - int x = 130;
+          byte b = x;                CE: PLP
+          byte b = (byte) x;         Right, but big to small -> Narrowing, Loss of Precision
+          sop(b);                    -126        130 ->    0000....0010000010
+                                                           10000010 -> MSD Lost in sign
+                                                           2's complement of rest -> 126
+
+          int x = 150;
+          short s = (short) x;       150
+          sop(x);
+          byte b = (byte) x;         10010110 -> -1101001 + 1 -> 1101010 -> -106
+
+          double d = 130.456;
+          int x = (int) d;           130
+          sop(x);
+          byte b = (byte) d;         
+          sop(b);                    10000010 -> -1111101 + 1 -> -126
+
+-------------------------------------------------------------------------------------------------------------------------------
+- Assignment Operators
+
+
+
