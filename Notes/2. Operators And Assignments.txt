@@ -1,16 +1,16 @@
 OPERATORS AND ASSIGNMENTS
 
-- Increment and Decrement Operators
+- Increment and Decrement Operators(++, --)
 - Arithmetic Operators
-- String Concatenation Operator 
-- Relational Operator
-- Equality Operator 
+- String Concatenation Operator (+)
+- Relational Operator(<, <=, >, >=)
+- Equality Operator(==, !=)
 - Instanceof Operator
-- Bitwise Operator
-- Shortcircuit Operator
+- Bitwise Operator(&, |, ^, ~)
+- Shortcircuit Operator(&&, ||)
 - Typecast Operators
 - Assignment Operators
-- Conditional Operators
+- Conditional Operators(Ternary -?:)
 - new Operator
 - [] Operator
 - Operator Precedence
@@ -221,6 +221,45 @@ Example - int x = 130;
 
 -------------------------------------------------------------------------------------------------------------------------------
 - Assignment Operators
+
+- Simple 
+Example - int x =10;
+
+- Chained
+Example - int a, b, c, d;
+          a = b = c = d = 10;
+
+          int b, c, d;
+          int a = b = c = d = 20;
+
+- Compound
+Example - int a =10;
+          a+= 20;
+
+--------------------------------------------
+|    +=    |    &=    |    >>=  (Signed)   |  
+|    -=    |    |=    |    >>>= (Unsigned) |
+|    *=    |    ^=    |    <<=             |
+|    /=    |          |                    |
+|    %=    |          |                    |
+--------------------------------------------
+Sometimes assignment operator mixed with some other operator, such type of assigment operators are called compound assignment operators.
+
+Examples -
+    byte b = 10;                        |    byte b = 10;            |    byte b = 10;
+    b = b + 1;                          |    b++;                    |    b+= 10;
+    sop(b);         CE: PLP             |    sop(b);            11   |    sop(b);            20
+                    max(int, byte, int) |                            |
+                                        |                            |
+    Second and third operations means b = (byte)(b + 1);
+
+    int a, b, c, d;                    
+    int a = b = c = d = 20;           left to right
+    a+= b-+ c*= d/= 2;                right to left, -160 -180 200 10
+
+-------------------------------------------------------------------------------------------------------------------------------
+- Conditional Operator(Ternary Operator - ?:)
+
 
 
 
