@@ -10,7 +10,7 @@ OPERATORS AND ASSIGNMENTS
 - Shortcircuit Operator(&&, ||)
 - Typecast Operators
 - Assignment Operators
-- Conditional Operators(Ternary -?:)
+- Conditional Operators(Ternary ?:)
 - new Operator
 - [] Operator
 - Operator Precedence
@@ -258,7 +258,7 @@ Examples -
     a+= b-+ c*= d/= 2;                right to left, -160 -180 200 10
 
 -------------------------------------------------------------------------------------------------------------------------------
-- Conditional Operator(Ternary Operator - ?:)
+- Conditional Operator(Ternary Operator ?:)
 
 
 
