@@ -296,6 +296,61 @@ Examples -
 
 -------------------------------------------------------------------------------------------------------------------------------
 - Evaluation order of Java Operands
+In Java, we have only operator precedence but not operand precedence.
+Before applying any operator, all operands will be evaluated from left to right.
+
+Example - class Test {
+              psvm(String[] args){
+                sop(m1(1) + m1(2) * m1(3) / m1(4) + m1(5) * m1(6));                1 + 6/4 + 30 -> 1+1+30 -> 32
+              }
+
+              public static int m1(int i){
+                sop(i);                                                            1 2 3 4 5 6
+                return i;
+              }
+          }
+
+-------------------------------------------------------------------------------------------------------------------------------
+- new vs newInstance()
+We can use new operator to create an object if we know classname at the beginning
+Example - Test t = new Test();
+          Student s = new Student();
+
+newInstance() is a method in class Class.
+We can use newInstance() to create object if we dont know classname at the beginning & it is available dynamically at runtime.
+Example - class Test{
+            psvm(String[] args) throws Exception;
+            { 
+                Object o = Class.forName(args[0]).newInstance();
+                sop("Created for " + o.getClass().getName());                    java Test Sudent -> Created for Student
+            }
+          }
+
+Note - In case of new operator based on our requirement we can invoke any constructor.
+       Example - Test t1 = new Test(10);
+                 Test t2 = new Test();
+                 Test t3 = new Test("Akash");
+       But newInstance() internally calls no-args constructor. 
+       Hence we use newInstance(), compulsary corresponding class should contain no-args constructor else RE: InstantiationException
+       Used in Servlets
+
+Note - Test t = new Test();                                                                 RE: NoClassDefFoundError:Test
+       Object o = Class.forName.(args[0]).newInstance();                                    RE: ClassNotFoundException:Test
+       While using new operator, if at runtime corresponding .class file not available then RE: NoClassDefFoundErrorr:Test 
+       for newInstance()                                                                    RE: ClassNotFoundException:Test
+
+-----------------------------------------------------------------------------------------------------------------------
+|                        new                        |                        newInstance()                            |
+-----------------------------------------------------------------------------------------------------------------------
+| Operator                                          | Method                                                          |
+| If we know class name at beginning                | If we dont know class name at begin, available at runtime       |
+| class not required to contain no-args constructor | must contain no-args constructor else RE: InstantiationException|
+| If no .class file, RE: NoClassDefFoundError:Test  | If no .class file, RE: ClassNotFoundException:Test (checked)    |
+| (unchecked)                                       |                                                                 |
+-----------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------
+- ClassNotFoundException vs NoClassDefFoundError
 
 
 
