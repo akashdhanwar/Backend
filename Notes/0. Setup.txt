@@ -1,1 +1,18 @@
+JDK 17 vs JDK 21
 
+ENVIRONMENT SETUP -
+JDK - Is a software used to create and run Java Programs
+IntelliJ/Eclipse - Code Editor
+
+JDK Installation - https://www.java.sun.com, downlod v17
+
+JShell is the REPL of Java - https://www.docs.oracle.com/en/javase/17/jshell/introduction-jshell.html
+CMD > jshell
+> /help intro
+> /help
+> /list -all
+> /list -start
+> {
+java code multiline
+}
+> /exit
