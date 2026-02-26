@@ -322,7 +322,7 @@ Example - class Test{
             psvm(String[] args) throws Exception;
             { 
                 Object o = Class.forName(args[0]).newInstance();
-                sop("Created for " + o.getClass().getName());                    java Test Sudent -> Created for Student
+                sop("Created for " + o.getClass().getName());                    -> java Test Sudent -> Created for Student
             }
           }
 
@@ -350,7 +350,25 @@ Note - Test t = new Test();                                                     
 -----------------------------------------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------------------------------------------------
-- ClassNotFoundException vs NoClassDefFoundError
+- ClassNotFoundException(checked) vs NoClassDefFoundError(unchecked, for Hard coded)
 
+-------------------------------------------------------------------------------------------------------------------------------
+- instanceOf vs isInstance()
+instanceOf is an operator in java. 
+We can use instanceOf to check whether the given object is of particular type or not and we know the type at the beginning.
 
+Example -
+    Thread t = new Thread();         |    class Test{
+    sop(t instanceOf Runnable);      |        psvm(String[] args) throws Exception;
+    sop(t instanceOf Object);        |        { 
+    -> java Test                     |            Thread t = new Thread();
+                                     |            sop(t.forName(args[0]).isInstance());
+                                     |         }
+                                     |    }
+                                     |    -> java Test Runnable
+
+isInstance() is a method present in java.lang.Class
+We can use isInstance() to check whether the given object is of particular type or not and it is available dynamically at runtime.
+
+-------------------------------------------------------------------------------------------------------------------------------
 
