@@ -4,7 +4,7 @@ ENVIRONMENT SETUP -
 JDK - Is a software used to create and run Java Programs
 IntelliJ/Eclipse - Code Editor
 
-JDK Installation - https://www.java.sun.com, downlod v17
+JDK Installation - https://www.oracle.com/java/technologies/downloads/
 
 JShell is the REPL of Java - https://www.docs.oracle.com/en/javase/17/jshell/introduction-jshell.html
 CMD > jshell
