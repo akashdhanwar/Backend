@@ -246,11 +246,11 @@ Example - int a =10;
 Sometimes assignment operator mixed with some other operator, such type of assigment operators are called compound assignment operators.
 
 Examples -
-    byte b = 10;                        |    byte b = 10;            |    byte b = 10;
-    b = b + 1;                          |    b++;                    |    b+= 10;
-    sop(b);         CE: PLP             |    sop(b);            11   |    sop(b);            20
-                    max(int, byte, int) |                            |
-                                        |                            |
+    byte b = 10;                        |    byte b = 10;            |    byte b = 10;            |    int a = 10;
+    b = b + 1;                          |    b++;                    |    b+= 10;                 |    a = a - 5.5;
+    sop(b);         CE: PLP             |    sop(b);            11   |    sop(b);            20   |    sop(a);            CE: PLP
+                    max(int, byte, int) |                            |                            |    a-= 5.5;
+                                        |                            |                            |    sop(s);            4
     Second and third operations means b = (byte)(b + 1);
 
     int a, b, c, d;                    
